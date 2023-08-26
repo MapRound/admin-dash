@@ -35,7 +35,7 @@ import CardStatsHorizontalWithDetails from 'src/@core/components/card-statistics
 import { getInitials } from 'src/@core/utils/get-initials'
 
 // ** Actions Imports
-import { fetchData, deleteUser } from 'src/store/apps/user'
+import { fetchData } from 'src/store/listings/cars'
 
 // ** Third Party Components
 import axios from 'axios'
@@ -93,7 +93,7 @@ const RowOptions = ({ id }) => {
   }
 
   const handleDelete = () => {
-    dispatch(deleteUser(id))
+    // dispatch(deleteUser(id))
     handleRowOptionsClose()
   }
 
@@ -249,7 +249,7 @@ const columns = [
   }
 ]
 
-const UserList = ({ apiData }) => {
+const Overview = ({ apiData }) => {
   // ** State
   const [role, setRole] = useState('')
   const [plan, setPlan] = useState('')
@@ -391,15 +391,15 @@ const UserList = ({ apiData }) => {
   )
 }
 
-export const getStaticProps = async () => {
-  const res = await axios.get('/cards/statistics')
-  const apiData = res.data
+// export const getStaticProps = async () => {
+//   const res = await axios.get('/cards/statistics')
+//   const apiData = res.data
 
-  return {
-    props: {
-      apiData
-    }
-  }
-}
+//   return {
+//     props: {
+//       apiData
+//     }
+//   }
+// }
 
-export default UserList
+export default Overview
