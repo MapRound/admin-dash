@@ -1,4 +1,5 @@
-const baseUrl = process.env.NODE_ENV === 'production' ? 'servcies.mapround.co' : 'http://localhost:5556/api/v1'
+const baseUrl =
+  process.env.NODE_ENV === 'production' ? 'http://servcies.mapround.co/api/v1' : 'http://localhost:5556/api/v1'
 
 export default {
   meEndpoint: baseUrl + '/admin/me',
