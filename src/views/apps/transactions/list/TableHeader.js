@@ -8,7 +8,7 @@ import Icon from 'src/@core/components/icon'
 
 const TableHeader = props => {
   // ** Props
-  const { handleFilter, toggle, value } = props
+  const { handleFilter, toggle, value, title } = props
 
   return (
     <Box
@@ -31,14 +31,14 @@ const TableHeader = props => {
           size='small'
           value={value}
           sx={{ mr: 4 }}
-          placeholder='Search transactions'
+          placeholder={title ? `Search ${title}` : 'Search transactions'}
           onChange={e => handleFilter(e.target.value)}
         />
-        {/*
-        <Button color='secondary' onClick={toggle} variant='contained' sx={{ '& svg': { mr: 2 } }}>
+
+        <Button color='info' onClick={toggle} variant='contained' sx={{ '& svg': { mr: 2 } }}>
           <Icon fontSize='1.125rem' icon='tabler:plus' />
-          Add New User
-        </Button> */}
+          Add New {title}
+        </Button>
       </Box>
     </Box>
   )

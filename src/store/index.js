@@ -6,13 +6,15 @@ import { configureStore } from '@reduxjs/toolkit'
 // import user from 'src/store/user'
 // import email from 'src/store/email'
 import cars from 'src/store/listings/cars'
+import listings from 'src/store/listings'
 
 // import transactions from 'src/store/transactions'
 // import permissions from 'src/store/apps/permissions'
 
 export const store = configureStore({
   reducer: {
-    cars
+    cars,
+    listings
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

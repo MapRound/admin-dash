@@ -97,7 +97,7 @@ const App = props => {
     <Provider store={store}>
       <CacheProvider value={emotionCache}>
         <Head>
-          <title>{`${themeConfig.templateName} - Material Design React Admin Template`}</title>
+          <title>{`${themeConfig.templateName} - Get around faster`}</title>
 
           <meta name='keywords' content='Mapround travel, uber, bolt' />
           <meta name='viewport' content='initial-scale=1, width=device-width' />
